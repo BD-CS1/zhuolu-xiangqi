@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#102623"><meta name="description" content="執子入神話，落子定九州。黃帝與蚩尤的古風奇幻象棋，含電腦對弈、同機雙人與戰鬥插畫。"><title>涿鹿弈境｜黃帝・蚩尤</title><link rel="icon" type="image/svg+xml" href="./assets/favicon.svg"><link rel="stylesheet" href="./style.css"><link rel="preload" as="image" href="./assets/hero.webp"></head>
+<body>
+<main class="game" id="game">
+ <header class="hero">
+  <div class="hero-shade"></div><div class="topline"><span class="eyebrow">MYTH OF ZHUOLU</span><div class="header-actions"><button id="sound" class="icon-button" aria-label="開啟音樂與音效" title="開啟音樂與音效"></button><button id="settings" class="icon-button" aria-label="對弈設定" title="對弈設定"></button></div></div>
+  <div class="brand"><span class="brand-seal">弈</span><div><h1>涿鹿弈境</h1><p>執子入神話 · 落子定九州</p></div></div>
+  <div class="chapter"><span>黃帝 <i>對決</i> 蚩尤</span><button id="mode-chip">人機對弈 <span>⌄</span></button></div>
+ </header>
+ <section class="commander enemy" aria-label="蚩尤陣營"><div class="avatar chiyou"></div><div class="commander-info"><div class="commander-name">九黎 · 蚩尤 <span class="side-tag">黑方</span></div><div class="subline" id="enemy-sub">電腦棋手 · 謀士</div></div><div class="turn-mark" id="black-mark"><span></span><b>待陣</b></div></section>
+ <section class="arena"><div class="board-frame"><div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div><div id="board" class="board" role="group" aria-label="象棋棋盤，紅方在下，點選棋子後選擇落點"><svg id="grid" viewBox="0 0 900 1000" aria-hidden="true"></svg><div id="points"></div><div id="tokens"></div></div></div></section>
+ <section class="commander player" aria-label="黃帝陣營"><div class="avatar huangdi"></div><div class="commander-info"><div class="commander-name">軒轅 · 黃帝 <span class="side-tag red-tag">紅方</span></div><div class="subline" id="player-sub">由你執掌 · 紅方先行</div></div><div class="turn-mark active" id="red-mark"><span></span><b>執子</b></div></section>
+ <div class="status" role="status" aria-live="polite"><span id="status-icon">◆</span><span id="status-text">你的回合，點選棋子開始對弈</span><span id="move-count">第 1 手</span></div>
+ <nav class="toolbar" aria-label="對弈工具"><button id="undo"></button><button id="hint"></button><button id="records"></button><button id="new-game"></button></nav>
+ <footer><span>山河為局，眾生為子</span><button id="fullscreen" aria-label="切換全螢幕">⛶ 全螢幕</button></footer>
+ <div id="toast" class="toast" role="status"></div>
+</main>
+<dialog id="panel"><div class="modal-head"><span class="eyebrow" id="panel-kicker">THE ART OF XIANGQI</span><button class="close" aria-label="關閉">×</button></div><div id="panel-content"></div></dialog>
+<div id="battle" class="battle" hidden role="dialog" aria-modal="true" aria-label="神話戰鬥插畫"><img id="battle-art" alt=""><div class="battle-vignette"></div><div class="battle-top">涿鹿戰紀 <span>MYTHIC ENCOUNTER</span><div id="battle-matchup" class="battle-matchup"></div></div><div id="battle-loading" class="battle-loading" role="status"></div><div class="battle-copy"><span id="battle-camp"></span><h2 id="battle-title"></h2><p id="battle-desc"></p><div class="battle-line"></div><small><span id="battle-note">點擊畫面繼續</span> <span id="battle-count"></span></small></div><div class="battle-controls"><button id="pause-battle">暫停賞圖</button><button id="skip-battle">返回棋局 →</button></div><div id="battle-progress" class="battle-progress"></div></div>
+<script type="module" src="./app.js"></script>
+</body></html>
