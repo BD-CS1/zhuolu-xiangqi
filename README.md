@@ -2,6 +2,10 @@
 
 以涿鹿神話為主題的 9:16 象棋遊戲。純靜態 HTML / CSS / ES Modules，沒有執行期套件、伺服器資料庫或外部 AI API。圖像為專案生成的奇幻插畫；音樂與音效為 Web Audio 合成的原創音色。
 
+## 線上遊玩
+
+[開啟涿鹿弈境](https://bd-cs1.github.io/zhuolu-xiangqi/) — 手機與電腦瀏覽器皆可直接遊玩，無需登入。
+
 ## 功能
 
 - 紅方玩家對黑方電腦（三級棋力）或同機雙人。
@@ -28,10 +32,17 @@
 - `tests/engine.test.mjs`：走法、將軍、困斃、搜尋與自我對弈測試。
 - `tests/battle-catalog.test.mjs`：72 種吃子方向的精確配對、紅黑角色互換與全部資產完整性測試。
 - `.openai/hosting.json`：Sites 專案身分與靜態部署目錄。
+- `.github/workflows/pages.yml`：測試通過後自動發布 `dist/` 至 GitHub Pages。
 
 ## 執行與測試
 
 用 HTTP 靜態伺服器提供 `dist/`，不要直接以 `file://` 開啟（ES Modules 與 Worker 需要 HTTP）。規則測試執行 `npm test`，不需要安裝相依套件。Sites 靜態部署直接使用 `dist/`。
+
+## GitHub Pages 發布與更新
+
+公開儲存庫：<https://github.com/BD-CS1/zhuolu-xiangqi>。在 Settings → Pages 將 Source 設為 **GitHub Actions**。推送或合併變更至 `main` 後，`Test and deploy game to GitHub Pages` 工作流程先執行全部 17 項測試，再將 `dist/` 與全部插畫發布至公開網址；測試失敗不會執行部署。亦可在 Actions 手動執行工作流程。
+
+修改遊戲時保留 `dist/` 內的相對資產路徑，以支援 `/zhuolu-xiangqi/` 專案路徑。部署結果可在儲存庫 Actions 與 Settings → Pages 查看。Sites 與 GitHub Pages 是獨立部署；在其中一方修改不會自動同步另一方。不同網域的本機棋局保存也各自獨立。
 
 ## 規則與限制
 
