@@ -1,6 +1,6 @@
 import {initialBoard,OTHER,NAMES,VALUE,legalMoves,allMoves,inCheck,gameState,applyMove} from './engine.js';
-import {ENCOUNTERS,ROLE_NAMES,ROLE_ORDER,getBattleScene,getSceneByKey,filterScenes} from './battle-catalog.js';
-import {createBattleViewer,preloadBattleScene} from './battle-viewer.js';
+import {ENCOUNTERS,ROLE_NAMES,ROLE_ORDER,getBattleScene,getSceneByKey,filterScenes} from './battle-catalog.js?v=3';
+import {createBattleViewer,preloadBattleScene} from './battle-viewer.js?v=1.2.1';
 import {createGameAudio} from './game-audio.js';
 import {bindBoardInput} from './board-input.js';
 const $=id=>document.getElementById(id),KEY='zhuolu-xiangqi-v1';

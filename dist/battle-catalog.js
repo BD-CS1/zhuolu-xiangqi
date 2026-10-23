@@ -7,8 +7,8 @@ export const ENCOUNTERS = [
     "black": "R",
     "title": "雙轅爭鋒",
     "location": "絕壁古道",
-    "image": "./assets/battles/rR-bR.webp",
-    "thumbnail": "./assets/battles/rR-bR-thumb.webp"
+    "image": "./assets/battles/rR-bR.webp?v=3",
+    "thumbnail": "./assets/battles/rR-bR-thumb.webp?v=3"
   },
   {
     "key": "rR-bH",
@@ -52,8 +52,8 @@ export const ENCOUNTERS = [
     "black": "E",
     "title": "象震奔轅",
     "location": "飛瀑斷崖",
-    "image": "./assets/battles/rR-bE.webp",
-    "thumbnail": "./assets/battles/rR-bE-thumb.webp"
+    "image": "./assets/battles/rR-bE.webp?v=3",
+    "thumbnail": "./assets/battles/rR-bE-thumb.webp?v=3"
   },
   {
     "key": "rR-bK",
@@ -205,8 +205,8 @@ export const ENCOUNTERS = [
     "black": "H",
     "title": "長槍逐騎",
     "location": "夕照葦原",
-    "image": "./assets/battles/rP-bH.webp",
-    "thumbnail": "./assets/battles/rP-bH-thumb.webp"
+    "image": "./assets/battles/rP-bH.webp?v=3",
+    "thumbnail": "./assets/battles/rP-bH-thumb.webp?v=3"
   },
   {
     "key": "rP-bC",
@@ -223,8 +223,8 @@ export const ENCOUNTERS = [
     "black": "P",
     "title": "寸土爭鋒",
     "location": "楓雨古道",
-    "image": "./assets/battles/rP-bP.webp",
-    "thumbnail": "./assets/battles/rP-bP-thumb.webp"
+    "image": "./assets/battles/rP-bP.webp?v=3",
+    "thumbnail": "./assets/battles/rP-bP-thumb.webp?v=3"
   },
   {
     "key": "rP-bA",
@@ -241,8 +241,8 @@ export const ENCOUNTERS = [
     "black": "E",
     "title": "孤槍鎮象",
     "location": "靈林古祠",
-    "image": "./assets/battles/rP-bE.webp",
-    "thumbnail": "./assets/battles/rP-bE-thumb.webp"
+    "image": "./assets/battles/rP-bE.webp?v=3",
+    "thumbnail": "./assets/battles/rP-bE-thumb.webp?v=3"
   },
   {
     "key": "rP-bK",
@@ -250,8 +250,8 @@ export const ENCOUNTERS = [
     "black": "K",
     "title": "御前決刃",
     "location": "天燈祭野",
-    "image": "./assets/battles/rP-bK.webp",
-    "thumbnail": "./assets/battles/rP-bK-thumb.webp"
+    "image": "./assets/battles/rP-bK.webp?v=3",
+    "thumbnail": "./assets/battles/rP-bK-thumb.webp?v=3"
   },
   {
     "key": "rA-bR",
@@ -295,8 +295,8 @@ export const ENCOUNTERS = [
     "black": "R",
     "title": "象震奔轅",
     "location": "飛瀑斷崖",
-    "image": "./assets/battles/rE-bR.webp",
-    "thumbnail": "./assets/battles/rE-bR-thumb.webp"
+    "image": "./assets/battles/rE-bR.webp?v=3",
+    "thumbnail": "./assets/battles/rE-bR-thumb.webp?v=3"
   },
   {
     "key": "rE-bH",
@@ -340,8 +340,8 @@ export const ENCOUNTERS = [
     "black": "H",
     "title": "天命截騎",
     "location": "天月古陣",
-    "image": "./assets/battles/rK-bH.webp",
-    "thumbnail": "./assets/battles/rK-bH-thumb.webp"
+    "image": "./assets/battles/rK-bH.webp?v=3",
+    "thumbnail": "./assets/battles/rK-bH-thumb.webp?v=3"
   },
   {
     "key": "rK-bC",
@@ -349,8 +349,8 @@ export const ENCOUNTERS = [
     "black": "C",
     "title": "神兵御火",
     "location": "觀星神壇",
-    "image": "./assets/battles/rK-bC.webp",
-    "thumbnail": "./assets/battles/rK-bC-thumb.webp"
+    "image": "./assets/battles/rK-bC.webp?v=3",
+    "thumbnail": "./assets/battles/rK-bC-thumb.webp?v=3"
   },
   {
     "key": "rK-bP",

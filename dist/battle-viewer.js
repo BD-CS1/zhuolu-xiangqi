@@ -1,5 +1,5 @@
 import {NAMES} from './engine.js';
-import {ROLE_NAMES} from './battle-catalog.js';
+import {ROLE_NAMES} from './battle-catalog.js?v=3';
 
 const preloaded = new Map();
 export function preloadBattleScene(scene) {
