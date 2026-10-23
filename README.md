@@ -15,6 +15,8 @@
 - 神話戰場圖鑑可依紅方、黑方棋子篩選及展開大圖；音樂、音效與轉場皆可控制。
 - Web Worker 內的限時 alpha-beta 搜尋；提示、悔棋、戰報。
 - localStorage 保存目前棋局與設定，鍵盤與觸控操作。
+- 黑子方向可在「對弈設定」選擇正向或反向，反向將黑子字面旋轉 180°，方便對座雙人遊玩；會保留至下次開啟。
+- 設定內提供「試聽音效」以啟用聲音；音訊在點擊、手指放開或鍵盤操作後重新嘗試啟用，成功後才播放音效與背景音樂。
 
 ## 檔案
 
@@ -25,12 +27,15 @@
 - `dist/app.js`：互動、保存、棋局歷史、轉場與 Web Audio。
 - `dist/battle-catalog.js`：40 組紅黑棋子對戰配對、標題、地點與資產路徑。
 - `dist/battle-viewer.js`：圖片載入、7 秒倒數、暫停與圖鑑共用觀賞器。
+- `dist/board-input.js`：完整點擊後落子，避免觸控開圖後被同一手勢誤關閉。
+- `dist/game-audio.js`：音訊啟用、重試、暫停、音效與配樂排程。
 - `dist/assets/battles/*.webp`：40 幅原生直幅插畫及 40 幅縮圖，保持生成解析度（約 941 × 1672）。
 - `docs/battle-art-briefs.json`：各配對美術提示詞與角色描述。
 - `docs/battle-art-assets.json`：尺寸、容量與 SHA-256 資產清單。
 - `scripts/import-battle-art.py`：PNG 轉高品質 WebP 與圖鑑縮圖（開發用，需要 Pillow）。
 - `tests/engine.test.mjs`：走法、將軍、困斃、搜尋與自我對弈測試。
 - `tests/battle-catalog.test.mjs`：72 種吃子方向的精確配對、紅黑角色互換與全部資產完整性測試。
+- `tests/game-audio.test.mjs`、`tests/interaction.test.mjs`：音訊恢復、觸控事件與插畫倒數回歸測試。
 - `.openai/hosting.json`：Sites 專案身分與靜態部署目錄。
 - `.github/workflows/pages.yml`：測試通過後自動發布 `dist/` 至 GitHub Pages。
 
@@ -40,7 +45,7 @@
 
 ## GitHub Pages 發布與更新
 
-公開儲存庫：<https://github.com/BD-CS1/zhuolu-xiangqi>。在 Settings → Pages 將 Source 設為 **GitHub Actions**。推送或合併變更至 `main` 後，`Test and deploy game to GitHub Pages` 工作流程先執行全部 17 項測試，再將 `dist/` 與全部插畫發布至公開網址；測試失敗不會執行部署。亦可在 Actions 手動執行工作流程。
+公開儲存庫：<https://github.com/BD-CS1/zhuolu-xiangqi>。在 Settings → Pages 將 Source 設為 **GitHub Actions**。推送或合併變更至 `main` 後，`Test and deploy game to GitHub Pages` 工作流程先執行全部 26 項測試，再將 `dist/` 與全部插畫發布至公開網址；測試失敗不會執行部署。亦可在 Actions 手動執行工作流程。
 
 修改遊戲時保留 `dist/` 內的相對資產路徑，以支援 `/zhuolu-xiangqi/` 專案路徑。部署結果可在儲存庫 Actions 與 Settings → Pages 查看。Sites 與 GitHub Pages 是獨立部署；在其中一方修改不會自動同步另一方。不同網域的本機棋局保存也各自獨立。
 
