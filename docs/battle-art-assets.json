@@ -1,13 +1,13 @@
 {
-  "version": 2,
+  "version": 3,
   "count": 40,
   "assets": [
     {
       "key": "rR-bR",
       "width": 941,
       "height": 1672,
-      "bytes": 645602,
-      "sha256": "2366226c14aaf543d9e09cd6c41ddbe5ab44a31481d52c9e0b804dc48308ec89"
+      "bytes": 339916,
+      "sha256": "27d1e1efa6d7ceb364560e194409ee55038be209ab8556a7535d9d0ee9aca5bb"
     },
     {
       "key": "rR-bH",
@@ -41,8 +41,8 @@
       "key": "rR-bE",
       "width": 941,
       "height": 1672,
-      "bytes": 708920,
-      "sha256": "eaef39b7aafa5969a565b38f8a7b73e0e4a71797fba10397a4b4cbf33d7daf38"
+      "bytes": 336064,
+      "sha256": "af296245cd7dae76abc5080874c05d8302b4cbacdf3cb532868d81675ddd2ac3"
     },
     {
       "key": "rR-bK",
@@ -160,8 +160,8 @@
       "key": "rP-bH",
       "width": 941,
       "height": 1672,
-      "bytes": 556482,
-      "sha256": "54e405fd8e4079a5a57310edf30a28b7327738b37887023223b583672cdc0d60"
+      "bytes": 263208,
+      "sha256": "a05621cb3550514e63deb9e285234375f803acdf5c54d11bc2030c97ef953c4b"
     },
     {
       "key": "rP-bC",
@@ -174,8 +174,8 @@
       "key": "rP-bP",
       "width": 941,
       "height": 1672,
-      "bytes": 608572,
-      "sha256": "95a5cff3eec2f5805a8b5380a0f40489fa5d5ba960ba5a56368664ca57cbceef"
+      "bytes": 291164,
+      "sha256": "3ace64371d02c4a3a0f7f648aa412f4bd62336007d37ecd6cefc7fce4f915b5f"
     },
     {
       "key": "rP-bA",
@@ -188,15 +188,15 @@
       "key": "rP-bE",
       "width": 941,
       "height": 1672,
-      "bytes": 617882,
-      "sha256": "f952b84ccd476b079d40e4ce9b3f47d6378a7db8e18b198c9193c087faaebb66"
+      "bytes": 307678,
+      "sha256": "5676b3a01ea26c25ad7b229b4e5272d75480d1443004155cedac08328ce5f9a0"
     },
     {
       "key": "rP-bK",
       "width": 941,
       "height": 1672,
-      "bytes": 629428,
-      "sha256": "857473b2e234f7da2ba9392f25b800c80a9622e3f2fe3140147ed1343952bd16"
+      "bytes": 305696,
+      "sha256": "2548bbcea2907930ee0a68dae0842f949a58b6929bb2f761b7865ad2628541a5"
     },
     {
       "key": "rA-bR",
@@ -230,8 +230,8 @@
       "key": "rE-bR",
       "width": 941,
       "height": 1672,
-      "bytes": 702766,
-      "sha256": "0cbc4c4b2301e235f3044fd0ae9699e4b3664586cba65817198cdc805e9af969"
+      "bytes": 327788,
+      "sha256": "50fb564109b49bc0d1e9a57d598db2779a470f95b987a5744ec4c868ae801d65"
     },
     {
       "key": "rE-bH",
@@ -265,15 +265,15 @@
       "key": "rK-bH",
       "width": 941,
       "height": 1672,
-      "bytes": 534638,
-      "sha256": "84995474e81eb4a1fa419487191c9fb233f4a78b51b2955aeff296c68b946fd6"
+      "bytes": 252582,
+      "sha256": "1e1bd8117aba2d27418b63a8757d5d56e748816375b70f7c6782c56628e3c9df"
     },
     {
       "key": "rK-bC",
       "width": 941,
       "height": 1672,
-      "bytes": 673484,
-      "sha256": "52417c68edf8274d93c062b0028d2e2c297415217781cf3963cdef2546737bc4"
+      "bytes": 275726,
+      "sha256": "9e5cc4b37873a2f8aa9d56ed6b7176b7b281cf25857173a9462c35fcebd3515b"
     },
     {
       "key": "rK-bP",
