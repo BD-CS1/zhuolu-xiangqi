@@ -70,3 +70,11 @@
 .piece-glyph{display:block;pointer-events:none}
 #tokens.black-reversed .piece.black .piece-glyph{transform:rotate(180deg)}
 .board,.point{touch-action:manipulation}
+
+/* Hinted captures sit on the target piece, above the board markers. */
+.point.capture::after{width:110%;border-color:#ab321f;box-shadow:0 0 0 2px #ffe6a2,0 0 10px #a72b1b66}
+.piece.hint-target{z-index:6;box-shadow:0 0 0 3px #9d2417,0 0 0 6px #fff0aa,0 0 18px 5px #e8552a88}
+.piece.hint-target::after{inset:-19%;border:2px solid #e95c2c;opacity:1;animation:hintCaptureHalo 1.4s ease-in-out infinite}
+.hint-capture-badge{position:absolute;right:-.5em;top:-.55em;z-index:2;display:grid;place-items:center;width:1.6em;height:1.6em;border-radius:50%;background:#9e2117;border:2px solid #fff1b3;color:#fff8df;font:700 clamp(11px,1.65dvh,15px)/1 var(--sans);box-shadow:0 2px 5px #21140baa;pointer-events:none}
+@keyframes hintCaptureHalo{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.07);opacity:1}}
+@media(prefers-reduced-motion:reduce){.piece.hint-target::after{animation:none}}
