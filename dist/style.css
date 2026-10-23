@@ -64,3 +64,9 @@
 .gallery-panel .primary{flex:none;margin-top:5px;padding:11px}
 .gallery-panel .battle-gallery{grid-auto-rows:max-content}
 .gallery-card{height:max-content;align-self:start}
+
+/* Keep the hit area centered; only rotate the black piece glyphs. */
+.piece:active:not(:disabled),.point:active:not(:disabled){transform:translate(-50%,-50%)}
+.piece-glyph{display:block;pointer-events:none}
+#tokens.black-reversed .piece.black .piece-glyph{transform:rotate(180deg)}
+.board,.point{touch-action:manipulation}

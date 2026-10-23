@@ -24,7 +24,7 @@ export function createBattleViewer(root, game) {
     const art=find('battle-art'), pause=find('pause-battle'), skip=find('skip-battle');
     const progress=find('battle-progress'), count=find('battle-count'), loading=find('battle-loading');
     const previousFocus=document.activeElement;
-    let finished=false, ready=false, paused=!autoplay, remaining=7000, lastTick=performance.now();
+    let finished=false, ready=false, paused=!autoplay, remaining=7000, lastTick=performance.now(),backgroundPressed=false;
     const blackAttack=attacker?.[0]==='b';
     root.className='battle loading'+(blackAttack?' blue':'')+(!autoplay?' gallery-view':'');
     root.style.setProperty('--battle-image',`url("${scene.thumbnail}")`);
@@ -53,7 +53,7 @@ export function createBattleViewer(root, game) {
      document.removeEventListener('keydown',keyHandler);
      document.removeEventListener('visibilitychange',visibilityHandler);
      art.onload=null;art.onerror=null;
-     root.onclick=null;pause.onclick=null;skip.onclick=null;
+     root.onclick=null;root.onpointerdown=null;root.onpointercancel=null;pause.onclick=null;skip.onclick=null;
      root.hidden=true;
      game.inert=false;
      closeCurrent=null;
@@ -89,8 +89,11 @@ export function createBattleViewer(root, game) {
     art.alt=`${scene.title}：紅方${ROLE_NAMES[scene.red]}與黑方${ROLE_NAMES[scene.black]}於${scene.location}正面交戰的直幅神話插畫`;
     art.removeAttribute('src');
     art.src=scene.image;
-    root.onclick=()=>finish();
-    pause.onclick=e=>{e.stopPropagation();setPaused(!paused);};
+    // Ignore a compatibility click left over from the tap that opened this view.
+    root.onpointerdown=()=>{backgroundPressed=true;};
+    root.onpointercancel=()=>{backgroundPressed=false;};
+    root.onclick=()=>{if(backgroundPressed){backgroundPressed=false;finish();}};
+    pause.onclick=e=>{e.stopPropagation();backgroundPressed=false;setPaused(!paused);};
     skip.onclick=e=>{e.stopPropagation();finish();};
     document.addEventListener('keydown',keyHandler);
     document.addEventListener('visibilitychange',visibilityHandler);
