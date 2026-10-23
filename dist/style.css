@@ -78,3 +78,22 @@
 .hint-capture-badge{position:absolute;right:-.5em;top:-.55em;z-index:2;display:grid;place-items:center;width:1.6em;height:1.6em;border-radius:50%;background:#9e2117;border:2px solid #fff1b3;color:#fff8df;font:700 clamp(11px,1.65dvh,15px)/1 var(--sans);box-shadow:0 2px 5px #21140baa;pointer-events:none}
 @keyframes hintCaptureHalo{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.07);opacity:1}}
 @media(prefers-reduced-motion:reduce){.piece.hint-target::after{animation:none}}
+
+/* The original battle paintings stay intact in each end-of-game scene. */
+dialog.result-panel{width:min(94vw,600px);max-height:92dvh;padding:20px;overflow-y:auto;background:linear-gradient(150deg,#1c382e,#0d201d);border-color:#b3945d}
+.result-panel .modal-head{margin-bottom:14px}
+.result-ending{--ending-gold:#e2bd78;--ending-line:#9d7947;--ending-glow:#b97c302b}
+.result-ending.black{--ending-gold:#b4e0cd;--ending-line:#5c9c88;--ending-glow:#5cb69b22}
+.result-art{position:relative;margin:0 0 21px;padding:5px;border:1px solid var(--ending-line);background:#071310;box-shadow:0 8px 28px #0005,0 0 24px var(--ending-glow)}
+.result-art::after{content:'';position:absolute;inset:2px;border:1px solid #e5cd8f3b;pointer-events:none}
+.result-art img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#10221d}
+.result-camp{display:inline-block;color:var(--ending-gold);font:500 12px var(--serif);letter-spacing:.18em}
+.result-copy h2{margin:9px 0;color:#f0e0b9;font-size:30px;letter-spacing:.12em;line-height:1.45}
+.result-copy .result-outcome{margin:7px 0 3px;color:var(--ending-gold);font-size:13px}
+.result-copy .result-journey{margin:0 0 14px;font-size:11px;color:#a7b6a4}
+.result-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.result-actions .secondary{margin-top:10px}
+.result-ending.black .primary{background:linear-gradient(100deg,#b6d8bb,#7dab97);border-color:#cae4c8}
+@media(max-width:480px){dialog.result-panel{padding:15px}.result-panel .modal-head{margin-bottom:12px}.result-art{margin-bottom:16px}.result-copy h2{font-size:27px}.result-copy .result-journey{font-size:10px}.result-panel .eyebrow{font-size:9px;letter-spacing:.18em}}
+@media(max-height:760px) and (min-width:481px){dialog.result-panel{padding:16px}.result-panel .result-art{max-width:440px;margin:0 auto 14px}.result-panel .modal-head{margin-bottom:10px}}
+@media(max-height:600px){.result-panel .result-art{max-width:360px;margin:0 auto 12px}.result-copy h2{font-size:24px;margin:5px 0}.result-copy .result-journey{margin-bottom:6px}}
